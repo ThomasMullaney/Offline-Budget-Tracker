@@ -4,9 +4,10 @@
   "description": "",
   "main": "server.js",
   "scripts": {
+    "build": "webpack",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
-    
+    "start": "node server.js",
+    "lite-server": "lite-server"
   },
   "repository": {
     "type": "git",
@@ -23,6 +24,7 @@
     "express": "^4.17.1",
     "mongoose": "^5.10.5",
     "moongoose": "0.0.5",
-    "morgan": "^1.10.0"
+    "morgan": "^1.10.0",
+    "webpack": "^4.44.1"
   }
 }
