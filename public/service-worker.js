@@ -20,21 +20,20 @@ self.addEventListener("install", function (evt) {
   evt.waitUntil(
     // cache all static assets
     caches.open(CACHE_NAME).then((cache) => {
-      return (
-        cache.addAll(FILES_TO_CACHE),
+      return cache.addAll(FILES_TO_CACHE),
         console.log("Your file were pre-cached successfully")
-      );
+      ;
     })
   );
   self.skipWaiting();
 });
 
-// activating and will clean old caches?
+// activating 
 self.addEventListener("activate", (evt) => {
   evt.waitUntil(
-    caches.keys().then((keyList) => {
+    caches.keys().then(keyList => {
       return Promise.all(
-        keyList.map((key) => {
+        keyList.map(key => {
           if (key !== CACHE_NAME && DATA_CACHE_NAME) {
             console.log("Removing old cache", key);
             return caches.delete(key);
@@ -75,10 +74,15 @@ self.addEventListener("fetch", (evt) => {
   }
 
   evt.respondWith(
-    caches.open(CACHE_NAME).then((cache) => {
-      return cache.match(evt.request).then((response) => {
-        return response || fetch(evt.request);
-      });
+    fetch(evt.request).catch(function (){
+      return caches.match(evt.request).then(function(response){
+        if (response){
+          return response;
+        } else if(evt.request.headers.get("accept").includes("text/html")){
+          return caches.match("/");
+        }
+      })
     })
-  );
+  )
 });
+   
