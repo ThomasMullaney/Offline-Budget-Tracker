@@ -1,14 +1,13 @@
-let transactions = [];
-let myChart;
-
-
 if ("serviceWorker" in navigator) {
   window.addEventListener("load", () => {
     navigator.serviceWorker.register("service-worker.js") 
     .then(reg => console.log("Found your service worker!.", reg))
-    .catch(error => console.log("Service Worker registration failed:", error));
+   // .catch(error => console.log("Service Worker registration failed:", error));
   });
 };
+
+let transactions = [];
+let myChart;
 
 fetch("/api/transaction")
   .then(response => {
@@ -159,4 +158,8 @@ document.querySelector("#add-btn").onclick = function() {
 
 document.querySelector("#sub-btn").onclick = function() {
   sendTransaction(false);
+};
+document.querySelector("#del-btn").onclick = function() {
+  event.preventDefault();
+  deletePending();
 };
