@@ -1,18 +1,19 @@
-const CACHE_NAME = "my-site-cache-v2";
-const DATA_CACHE_NAME = "data-cache-v2";
-
 const FILES_TO_CACHE = [
   "/",
   "/index.html",
-  "/assets/js/index.js",
-  "/assets/js/db.js",
-  "/assets/css/style.css",
+  "/index.js",
+  "/db.js",
+  "/style.css",
   "/favicon.ico",
-  "/service-worker.js",
   "manifest.webmanifest",
   "/assets/images/icons/icon-192x192.png",
   "/assets/images/icons/icon-512x512.png"
 ];
+
+const CACHE_NAME = "my-site-cache-v2";
+const DATA_CACHE_NAME = "data-cache-v1";
+
+
 
 // install service worker
 self.addEventListener("install", function (evt) {
@@ -54,7 +55,8 @@ self.addEventListener("fetch", evt => {
         .open(DATA_CACHE_NAME)
         .then(cache => {
           return fetch(evt.request)
-            .then((response) => {
+            .then(response => {
+              // if response is good, clone it and store it in cache
               if (response.status === 200) {
                 cache.put(evt.request.url, response.clone());
               }
@@ -65,17 +67,18 @@ self.addEventListener("fetch", evt => {
               return cache.match(evt.request);
             });
         })
-        .catch((err) => console.log(err))
+        .catch(err => console.log(err))
     );
     return;
-  }
+  } 
 
   evt.respondWith(
     fetch(evt.request).catch(function (){
       return caches.match(evt.request).then(response => {
         if (response) {
           return response;
-        } else if(evt.request.headers.get("accept").includes("text/html")){
+        } else if (evt.request.headers.get("accept").includes("text/html")){
+          // return cahced homepage for all requests for html pages
           return caches.match("/");
         }
       });
