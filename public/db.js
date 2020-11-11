@@ -77,9 +77,13 @@ function checkDatabase() {
     store.clear();
   }
   // function deleteMany() {
-  //   const transaction = db.transaction("readwrite");
-  //   const store = transaction.objectStore()
-  //   store.clear();
+  //   const db = db.collection("transactions").drop(function(err, delOK){
+  //     if (err) throw err
+  //     if (delOK) console.log("dropped database, delOK ------>", delOK)
+  //   });
+    // const transaction = db.transaction("readwrite");
+    // const store = transaction.objectStore()
+    // store.clear();
   // }
 
 // listen for app coming back online

@@ -27,7 +27,7 @@
       <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
       <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
       <button id="del-btn"><i class="fa fa-trash"></i>Delete Pending Records</button>
-      <button><i class="fa fa-trash"></i>Delete All Records</button>
+      <button id="del-all-btn"><i class="fa fa-trash"></i>Delete All Records</button>
       <p class="error"></p>
     </div>
 
@@ -55,8 +55,8 @@
         navigator.serviceWorker.register("service-worker.js")
           .then(reg => {
             console.log("Found your service worker!.", reg)
-            .catch(error => console.log("Service Worker registration failed:", error));
-          });
+          })
+          // .catch(err => console.log("Service Worker registration failed:", err));
       });
     }
   </script>

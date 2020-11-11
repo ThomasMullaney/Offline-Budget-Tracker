@@ -14,7 +14,6 @@ const DATA_CACHE_NAME = "site-cache-v1";
 // install service worker
 self.addEventListener("install", function (evt) {
   // pre cache data
-  // console.log("--->", evt)
   evt.waitUntil(
     // cache all static assets
     caches.open(CACHE_NAME).then(cache => {
@@ -76,16 +75,4 @@ self.addEventListener("fetch", evt => {
     })
   );
   });
-  // evt.respondWith(
-  //   fetch(evt.request).catch(function (){
-  //     return caches.match(evt.request).then(response => {
-  //       if (response) {
-  //         return response;
-  //       } else if (evt.request.headers.get("accept").includes("text/html")){
-  //         // return cahced homepage for all requests for html pages
-  //         return caches.match("/");
-  //       }
-  //     });
-  //   })
-  // );
-// });
+  
