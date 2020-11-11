@@ -76,6 +76,11 @@ function checkDatabase() {
     const store = transaction.objectStore("pending");
     store.clear();
   }
+  // function deleteMany() {
+  //   const transaction = db.transaction("readwrite");
+  //   const store = transaction.objectStore()
+  //   store.clear();
+  // }
 
 // listen for app coming back online
 window.addEventListener("online", checkDatabase);

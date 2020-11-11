@@ -13,6 +13,10 @@ const transactionSchema = new Schema(
       type: Number,
       required: "Enter an amount"
     },
+    id: {
+      type: String,
+      unique: true,
+    },
     date: {
       type: Date,
       default: Date.now

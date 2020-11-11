@@ -31,4 +31,14 @@ router.get("/api/transaction", (req, res) => {
     });
 });
 
+// delete many WIP
+// router.delete("api/transaction", (req, res) => {
+//   Transaction.find({}).remove(body)
+//     .then(dbTransaction => {
+//       res.json(dbTransaction)
+//     })
+//     .catch(err => {
+//       res.status(400).json(err)
+//     });
+// });
 module.exports = router;
