@@ -10,7 +10,7 @@ const FILES_TO_CACHE = [
   "/assets/images/icons/icon-512x512.png"
 ];
 
-const CACHE_NAME = "my-site-cache-v2";
+const CACHE_NAME = "static-cache-v2";
 const DATA_CACHE_NAME = "data-cache-v1";
 
 
@@ -18,7 +18,7 @@ const DATA_CACHE_NAME = "data-cache-v1";
 // install service worker
 self.addEventListener("install", function (evt) {
   // pre cache data
-  console.log("--->", evt)
+  // console.log("--->", evt)
   evt.waitUntil(
     // cache all static assets
     caches.open(CACHE_NAME).then(cache => {
@@ -35,7 +35,7 @@ self.addEventListener("activate", (evt) => {
     caches.keys().then(keyList => {
       return Promise.all(
         keyList.map(key => {
-          if (key !== CACHE_NAME && DATA_CACHE_NAME) {
+          if (key !== CACHE_NAME && key !== DATA_CACHE_NAME) {
             console.log("Removing old cache", key);
             return caches.delete(key);
           }
@@ -49,7 +49,8 @@ self.addEventListener("activate", (evt) => {
 // Fetch
 self.addEventListener("fetch", evt => {
   if (evt.request.url.includes("/api/")) {
-    console.log('[Service Worker] fetch evt.request.url ------->', evt.request.url)
+    console.log('[Service Worker] fetch evt.request.url ------->', evt.request.url);
+    
     evt.respondWith(
       caches
         .open(DATA_CACHE_NAME)
@@ -67,21 +68,28 @@ self.addEventListener("fetch", evt => {
               return cache.match(evt.request);
             });
         })
-        .catch(err => console.log(err))
     );
     return;
   } 
 
   evt.respondWith(
-    fetch(evt.request).catch(function (){
-      return caches.match(evt.request).then(response => {
-        if (response) {
-          return response;
-        } else if (evt.request.headers.get("accept").includes("text/html")){
-          // return cahced homepage for all requests for html pages
-          return caches.match("/");
-        }
+    caches.open(CACHE_NAME).then( cache => {
+      return cache.match(evt.request).then(response => {
+        return response || fetch(evt.request);
       });
     })
   );
-});
+  });
+  // evt.respondWith(
+  //   fetch(evt.request).catch(function (){
+  //     return caches.match(evt.request).then(response => {
+  //       if (response) {
+  //         return response;
+  //       } else if (evt.request.headers.get("accept").includes("text/html")){
+  //         // return cahced homepage for all requests for html pages
+  //         return caches.match("/");
+  //       }
+  //     });
+  //   })
+  // );
+// });
