@@ -77,9 +77,8 @@ function checkDatabase() {
     store.clear();
   }
   function dumpCollection() {
-  
-    const transaction = db.db("budget");
-    transaction.dropCollection("transactions", function (err, delOK){
+    const transaction = db.collection('transactions');
+    transaction.drop(function (err, delOK){
       if(err) throw err;
       if (delOK) console.log("Collection deleted");
       db.close();
