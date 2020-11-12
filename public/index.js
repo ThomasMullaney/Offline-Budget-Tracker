@@ -152,5 +152,12 @@ document.querySelector("#del-btn").onclick = function() {
   deletePending();
 };
 document.querySelector("#del-all-btn").onclick = function() {
-  dumpCollection();
+ $.ajax({
+   method: 'POST',
+   url: 'api/transactions/delete',
+   data: ({}),
+   success: function(response) {
+      location.reload();
+   }
+ })
 };

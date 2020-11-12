@@ -32,25 +32,13 @@ router.get("/api/transaction", (req, res) => {
     });
 });
 
-// delete one WIP
-// router.delete("api/transaction", (req, res) => {
-//   Transaction.delete({}).remove(body)
-//     .then(dbTransaction => {
-//       res.json(dbTransaction)
-//     })
-//     .catch(err => {
-//       res.status(400).json(err)
-//     });
-// });
+
 
 // drop collection WIP
-router.delete("api/transaction/all", (req, res) => {
-  db.budget.remove({}, (error, response) => {
-    if (error) {
-      res.send(error);
-    } else {
-      res.send(response);
-    }
+router.delete("api/transaction/delete", (req, res) => {
+  db.Transactions.deleteMany({})
+  .then(() =>{
+    res.json("deleted")
   });
 });
 module.exports = router;
