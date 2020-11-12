@@ -35,8 +35,8 @@ router.get("/api/transaction", (req, res) => {
 
 
 // drop collection WIP
-router.delete("api/transaction/delete", (req, res) => {
-  db.Transactions.deleteMany({})
+router.delete("/api/transaction/delete", (req, res) => {
+  Transaction.deleteMany({})
   .then(() =>{
     res.json("deleted")
   });
