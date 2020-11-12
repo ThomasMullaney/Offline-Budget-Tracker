@@ -76,15 +76,24 @@ function checkDatabase() {
     const store = transaction.objectStore("pending");
     store.clear();
   }
-  // function deleteMany() {
-  //   const db = db.collection("transactions").drop(function(err, delOK){
-  //     if (err) throw err
-  //     if (delOK) console.log("dropped database, delOK ------>", delOK)
-  //   });
-    // const transaction = db.transaction("readwrite");
-    // const store = transaction.objectStore()
-    // store.clear();
-  // }
+  function dumpCollection() {
+  
+    const transaction = db.db("budget");
+    transaction.dropCollection("transactions", function (err, delOK){
+      if(err) throw err;
+      if (delOK) console.log("Collection deleted");
+      db.close();
+      });
+    };
+
+
+    // const transaction = db.dropCollection("transaction");
+    // transaction.dropCollection("transactions", function(err, delOK) {
+    //   if (err) throw err;
+    //   if (delOK) console.log("dropped collection, delOK ------>", delOK);
+    //   transaction.close()
+    // });
+  
 
 // listen for app coming back online
 window.addEventListener("online", checkDatabase);

@@ -1,5 +1,6 @@
 // const { deleteMany } = require("../models/transaction");
 
+
 let transactions = [];
 let myChart;
 
@@ -150,6 +151,6 @@ document.querySelector("#del-btn").onclick = function() {
   event.preventDefault();
   deletePending();
 };
-// document.querySelector("#del-all-btn").onclick = function() {
-//   deleteMany();
-// };
+document.querySelector("#del-all-btn").onclick = function() {
+  dumpCollection();
+};
