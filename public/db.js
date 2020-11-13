@@ -76,22 +76,14 @@ function checkDatabase() {
     const store = transaction.objectStore("pending");
     store.clear();
   }
-  function dumpCollection() {
-    $.ajax({
-      method: 'POST',
-      url: 'api/transactions/delete',
-      data: ({}),
-      success: function(response) {
-         location.reload();
-      }
-    })
-    // const transaction = db.collection('transactions');
-    // transaction.drop(function (err, delOK){
-    //   if(err) throw err;
-    //   if (delOK) console.log("Collection deleted");
-    //   db.close();
-    //   });
-    };
+  // function dumpCollection() {
+  //   const transaction = db.collection('transactions');
+  //   transaction.drop(function (err, delOK){
+  //     if(err) throw err;
+  //     if (delOK) console.log("Collection deleted");
+  //     db.close();
+  //     });
+  //   };
 
 
     // const transaction = db.dropCollection("transaction");
