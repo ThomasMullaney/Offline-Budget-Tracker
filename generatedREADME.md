@@ -1,20 +1,44 @@
-## Offline Budget Tracker
+# Offline-Budget-Tracker
+
+<div>
+    <h4>
+    </a>
+    <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker/stargazers"><img src="https://img.shields.io/github/stars/ThomasMullaney/Offline-Budget-Tracker.svg?style=plasticr"/></a>
+    <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker/commits/master"><img src="https://img.shields.io/github/last-commit/ThomasMullaney/Offline-Budget-Tracker.svg?style=plasticr"/></a>
+        <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker/commits/master"><img src="https://img.shields.io/github/commit-activity/y/ThomasMullaney/Offline-Budget-Tracker.svg?style=plasticr"/></a>
+    </h4>
+</div>
     [![Generic badge](https://img.shields.io/badge/<SUBJECT>-<STATUS>-<COLOR>.svg)](https://shields.io/)
-    # Table of Contents
+
+## Description:
+### A Budget tracker that allows you to add and subtract transactions. App is a PWA and should function without a connection.
+
+## Table of Contents:
      
-    * [Description](#description)
-    * [License](#license)
-    * [Installation](#installation)
-    * [Usage](#usage)
-    * [Contributing](#contributing)
-    * [Tests](#tests)
-    * [Questions](#questions)
-    ## Description:A Budget tracker that allows you to add and subtract transactions. App is a PWA and should function without a connection.
-    ## License:MIT
-    ## Installation: Created with mongoose, express, node, mongoDB
-    ## Usage:To make keeping track of a daily budget simple 
-    ## Contributing:Tom Mullaney, and starting frontend code from bootcampspot
-    ## Testing:
-    ## github.com/undefined
-    ## Email: tloring.mullaney@gmail.com
+1. [Installation](#installation)
+2. [Usage](#usage)
+3. [License](#license)
+4. [Contributing](#contributing)
+5. [Tests](#tests)
+6. [Questions](#questions) 
+
+## Installation: 
+### Created with mongoose, express, node, mongoDB. Clone the repo and npm install to use. 
+
+## Usage:
+### The user can post transactions even when offline. Users can either add or subtract funds and have them populate to a table and graph. Users can also delete pending transactions made offline, or delete all transactions within MongoDB.
+
+## License:
+### [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
+    
+## Contributing:
+### Tom Mullaney
+
+## Tests:
+### 
+
+    
+## Questions:
+### github.com/ThomasMullaney
+### tloring.mullaney
     
