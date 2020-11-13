@@ -1,5 +1,5 @@
 # Offline-Budget-Tracker
-
+[![Generic badge](https://img.shields.io/badge/<SUBJECT>-<STATUS>-<COLOR>.svg)](https://shields.io/)
 <div>
     <h4>
     </a>
@@ -8,7 +8,7 @@
         <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker/commits/master"><img src="https://img.shields.io/github/commit-activity/y/ThomasMullaney/Offline-Budget-Tracker.svg?style=plasticr"/></a>
     </h4>
 </div>
-    [![Generic badge](https://img.shields.io/badge/<SUBJECT>-<STATUS>-<COLOR>.svg)](https://shields.io/)
+    
 
 ## Description:
 ### A Budget tracker that allows you to add and subtract transactions. App is a PWA and should function without a connection.
