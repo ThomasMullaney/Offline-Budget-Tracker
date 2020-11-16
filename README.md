@@ -1,5 +1,5 @@
 # Offline-Budget-Tracker
-[![Generic badge](https://img.shields.io/badge/<SUBJECT>-<STATUS>-<COLOR>.svg)](https://shields.io/)
+
 <div>
     <h4>
     </a>
@@ -8,20 +8,7 @@
         <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker/commits/master"><img src="https://img.shields.io/github/commit-activity/y/ThomasMullaney/Offline-Budget-Tracker.svg?style=plasticr"/></a>
     </h4>
 </div>
- <div align="center"><a name="menu"></a>
-  <h4>
-    <a href="https://offline-pwa-budget-tracker.herokuapp.com/">
-      Heroku Deployment
-    </a>
-    <span> | </span>
-    <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker">
-      Github Repository
-    </a>
-
-  </h4>
-</div>
-
-![Screenshot of application](img/Capture.PNG)
+    
 
 ## Description:
 ### A Budget tracker that allows you to add and subtract transactions. App is a PWA and should function without a connection.
@@ -40,6 +27,15 @@
 
 ## Usage:
 ### The user can post transactions even when offline. Users can either add or subtract funds and have them populate to a table and graph. Users can also delete pending transactions made offline, or delete all transactions within MongoDB.
+
+## Technologies:
+<ul>
+<li>HTML, CSS, Bootstrap</li>
+<li>Javascript, jQuery</li>
+<li>MongoDB</li>
+<li>node.js, Express, Sequlize, MySQL, dotenv, Passport, Bcrypt</li>
+<li>Github, Heroku</li>
+</ul>
 
 ## License:
 ### [![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)
