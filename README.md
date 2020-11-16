@@ -11,7 +11,7 @@
     
 <a href="https://offline-pwa-budget-tracker.herokuapp.com/"> Heroku </a> | <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker"> GitHub </a>
 
-![Screenshot of application] (img/Capture.PNG)
+![Screenshot of application](img/Capture.PNG)
 
 ## Description:
 ### A Budget tracker that allows you to add and subtract transactions. App is a PWA and should function without a connection.
