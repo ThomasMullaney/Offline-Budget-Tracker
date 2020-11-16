@@ -9,7 +9,7 @@
     </h4>
 </div>
     
-<a href="https://offline-pwa-budget-tracker.herokuapp.com/"> Heroku </a> | <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker> GitHub </a>
+<a href="https://offline-pwa-budget-tracker.herokuapp.com/"> Heroku </a> | <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker"> GitHub </a>
 
 ![Screenshot of application] (img/Capture.PNG)
 
