@@ -8,8 +8,18 @@
         <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker/commits/master"><img src="https://img.shields.io/github/commit-activity/y/ThomasMullaney/Offline-Budget-Tracker.svg?style=plasticr"/></a>
     </h4>
 </div>
-    
-<a href="https://offline-pwa-budget-tracker.herokuapp.com/"> Heroku </a> | <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker"> GitHub </a>
+ <div align="center"><a name="menu"></a>
+  <h4>
+    <a href="https://offline-pwa-budget-tracker.herokuapp.com/">
+      Heroku Deployment
+    </a>
+    <span> | </span>
+    <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker">
+      Github Repository
+    </a>
+
+  </h4>
+</div>
 
 ![Screenshot of application](img/Capture.PNG)
 
