@@ -8,6 +8,8 @@
         <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker/commits/master"><img src="https://img.shields.io/github/commit-activity/y/ThomasMullaney/Offline-Budget-Tracker.svg?style=plasticr"/></a>
     </h4>
 </div>
+
+![Screenshot of Application](img/Capture.PNG)
     
 
 ## Description:
