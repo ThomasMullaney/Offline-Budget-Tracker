@@ -51,6 +51,7 @@ This is an employee directory application.</p>
 <li>MongoDB</li>
 <li>node.js, Express, Sequlize, MySQL, dotenv, Passport, Bcrypt</li>
 <li>Github, Heroku</li>
+<li>PWA, Cache</li>
 </ul>
 
 ## License:
