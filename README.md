@@ -9,6 +9,20 @@
     </h4>
 </div>
 
+<p align="center"><font size="3">
+This is an employee directory application.</p>
+<div align="center"><a name="menu"></a>
+  <h4>
+    <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker">
+      Github Repository
+    </a>
+<span> | </span>
+<a href="https://offline-pwa-budget-tracker.herokuapp.com/">
+      Heroku
+    </a>
+  </h4>
+</div>
+
 ![Screenshot of Application](img/Capture.PNG)
     
 
