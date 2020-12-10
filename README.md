@@ -10,7 +10,7 @@
 </div>
 
 <p align="center"><font size="3">
-This is an employee directory application.</p>
+This is a PWA offline budget tracking app.</p>
 <div align="center"><a name="menu"></a>
   <h4>
     <a href="https://github.com/ThomasMullaney/Offline-Budget-Tracker">
@@ -27,7 +27,7 @@ This is an employee directory application.</p>
     
 
 ## Description:
-### A Budget tracker that allows you to add and subtract transactions. App is a PWA and should function without a connection.
+### A Budget tracker that allows you to add and subtract transactions. App is a PWA and can function without a connection, allowing users to post and view transactions even when traveling. Once connection is re-established viewable but pending transactions will be posted.
 
 ## Table of Contents:
      
